@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter task</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        button{
+            width: 70px;
+            height: 30px;
+            border: none;
+            border-radius: 7px;
+            background-color: gold;
+        }
+        h1{
+            text-align: center;
+            margin: 60px;
+        }
+        .box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .value-box{
+            width: 70px;
+            height: 30px;
+            border: none;
+            border-radius: 7px;
+            background-color: beige;
+        }
+        p{
+            width: 70px;
+            height: 30px;
+            border: none;
+            border-radius: 7px;
+            background-color: beige;
+            text-align: center;
+            padding: 2px;
+        }
+        #reset{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Counter App </h1>
+    <div class="box">
+        <button id="minus" onclick="minusNum()">-</button>
+        
+        <p id="value">0</p>
+        
+        <button id="plus" onclick="plusNum()">+</button>
+    </div>
+    <div id="reset">
+        <button id="reset-value" onclick="resetValue()">Reset</button>
+    </div>
+
+    <script>
+        var value = document.querySelector("#value");
+        
+        function plusNum() {
+            value.innerHTML++; 
+        }
+
+        function minusNum(){
+            if(value.innerHTML>0){
+                value.innerHTML--; 
+            }
+            else{
+                value.innerHTML
+            }
+        }
+
+        function resetValue(){
+            value.innerHTML = "0"
+        }
+    </script>
+
+</body>
+</html>
